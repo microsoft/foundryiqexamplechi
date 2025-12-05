@@ -1,0 +1,152 @@
+{
+  "$schema": "./conversation-starters.schema.json",
+  "version": 1,
+  "updated": "2025-10-16",
+  "generalFallback": [
+    {
+      "id": "themes",
+      "label": "Summarize Themes",
+      "prompt": "Summarize key themes across the most recent documents.",
+      "complexity": "Simple"
+    },
+    {
+      "id": "gaps",
+      "label": "Identify Gaps",
+      "prompt": "What gaps or missing details should I clarify next?",
+      "complexity": "Moderate"
+    }
+  ],
+  "sets": [
+    {
+      "agentIds": ["financial-knowledge-base"],
+      "starters": [
+        {
+          "id": "vanguard-fees",
+          "label": "Vanguard Fund Redemption Fees",
+          "prompt": "What fees do I pay if I redeem shares of the Vanguard 500 Index Fund within 30 days?",
+          "complexity": "Simple",
+          "tags": ["fees", "mutual-funds"]
+        },
+        {
+          "id": "etf-risk-compare",
+          "label": "ETF vs Closed-End Fund Risks",
+          "prompt": "Compare the risks of investing in ETFs vs closed-end funds for a conservative investor.",
+          "complexity": "Moderate",
+          "tags": ["risk-analysis", "investment-types"]
+        },
+        {
+          "id": "fact-sheet-analysis",
+          "label": "Fact Sheet Analysis with Image",
+          "prompt": "Upload a screenshot of a mutual fund fact sheet (e.g., fee table) and ask: Summarize the key risks and expense ratio from this document, and explain how it differs from the 10-K risk disclosure.",
+          "complexity": "Advanced",
+          "tags": ["multi-source", "image-upload", "fact-sheet"]
+        }
+      ]
+    },
+    {
+      "agentIds": ["healthcare-knowledge-base"],
+      "starters": [
+        {
+          "id": "albuterol-contraindications",
+          "label": "Albuterol Contraindications",
+          "prompt": "List contraindications for Albuterol tablets.",
+          "complexity": "Simple",
+          "tags": ["medications", "contraindications"]
+        },
+        {
+          "id": "cdc-sterilization",
+          "label": "CDC Sterilization Process",
+          "prompt": "What is the CDC's recommended sterilization process for reusable surgical instruments?",
+          "complexity": "Moderate",
+          "tags": ["guidelines", "sterilization", "cdc"]
+        },
+        {
+          "id": "drug-label-comparison",
+          "label": "Drug Label Dosage Comparison with Image",
+          "prompt": "Upload a photo of a drug label and ask: Extract the dosage instructions from this label and compare with the DailyMed version. Are they consistent?",
+          "complexity": "Advanced",
+          "tags": ["multi-source", "image-upload", "dosage"]
+        }
+      ]
+    },
+    {
+      "agentIds": ["manufacturing-knowledge-base"],
+      "starters": [
+        {
+          "id": "torque-spec",
+          "label": "Engine Assembly Torque",
+          "prompt": "What torque value is specified for assembly part 123 on the ZX-200 engine?",
+          "complexity": "Simple",
+          "tags": ["specifications", "assembly"]
+        },
+        {
+          "id": "airworthiness-directives",
+          "label": "EMB-120 Airworthiness Directives",
+          "prompt": "List all Airworthiness Directives issued since 2020 for Embraer EMB-120 and summarize key compliance actions.",
+          "complexity": "Moderate",
+          "tags": ["directives", "compliance", "aviation"]
+        },
+        {
+          "id": "faa-directive-analysis",
+          "label": "FAA Directive Analysis with Image",
+          "prompt": "Upload a photo of an FAA Airworthiness Directive header page and ask: Identify this directive, check if it has been superseded, and summarize the compliance steps.",
+          "complexity": "Advanced",
+          "tags": ["multi-source", "image-upload", "directives"]
+        }
+      ]
+    },
+    {
+      "agentIds": ["ontology-kb"],
+      "starters": [
+        {
+          "id": "list-turbines",
+          "label": "List All Turbines",
+          "prompt": "Show me a list of turbines",
+          "complexity": "Simple",
+          "tags": ["turbines", "list"]
+        },
+        {
+          "id": "wyoming-turbines",
+          "label": "Wyoming Turbines",
+          "prompt": "Turbines located in Wyoming",
+          "complexity": "Simple",
+          "tags": ["turbines", "location"]
+        },
+        {
+          "id": "ge-high-capacity",
+          "label": "High Capacity GE Turbines",
+          "prompt": "Highest capacity turbines with GE as a manufacturer",
+          "complexity": "Moderate",
+          "tags": ["turbines", "capacity", "manufacturer"]
+        }
+      ]
+    },
+    {
+      "agentIds": ["zava-knowledge-base"],
+      "starters": [
+        {
+          "id": "zava-marathon-comparison",
+          "label": "Marathon Queue & Emergency Planning",
+          "prompt": "Comparing expected finish times and crowd surges at the St. Louis and Washington DC marathons, how should Zava set up queue lines and emergency egress for an on-site merch booth using Zava Store Safety and Popup Safety guidelines",
+          "complexity": "Moderate",
+          "tags": ["marathon", "safety", "crowd-management"]
+        },
+        {
+          "id": "zava-sandiego-popup",
+          "label": "San Diego Marathon Popup Timing",
+          "prompt": "Based on the road closures, crowd density patterns, and spectator windows for the Sun & Surf Marathon in San Diego and using the Zava Live Event Popup Safety guidelines, what time should our Zava pop-up crew complete load-in, and what crowd-surge risks should we prepare for?",
+          "complexity": "Moderate",
+          "tags": ["marathon", "popup", "timing", "safety"]
+        },
+        {
+          "id": "zava-supply-chain-analysis",
+          "label": "Supply Chain Analysis with Image",
+          "prompt": "Here is an image of Zava's global production and distribution map. Using the image AND the Zava knowledge base, explain how the supply chain works end-to-end. Then identify which of these facilities would face the biggest operational risk during a major marathon weekend in the same city (e.g., St. Louis or Seattle), using marathon road-closure data. Recommend adjustments to shipping or staffing based on both the supply-chain map and the city marathon constraints.",
+          "complexity": "Advanced",
+          "tags": ["multi-source", "image-upload", "supply-chain", "marathon"],
+          "imageUrl": "/icons/zava-sample-img.png"
+        }
+      ]
+    }
+  ]
+}
